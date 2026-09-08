@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MekanAppsAPI", "MekanAppsAPI\MekanAppsAPI.csproj", "{8F4AF56D-381C-42F9-B875-00B2546CBFE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QeDynamicDocumentProcessing", "QeDocumentProcessing\QeDynamicDocumentProcessing.csproj", "{61CB8D8C-DBF9-479B-AE22-93B0F21E0352}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonDocumentProcessing", "CommonWordProcessing\CommonDocumentProcessing.csproj", "{6EBC97D1-BF22-4EFF-B305-5CA76C030263}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MekanCustomConnector", "MekanCustomConnector\MekanCustomConnector.csproj", "{55F505EA-1D4A-4F6E-8007-9D5AA47E64E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenXmlPowerTools", "Open-Xml-PowerTools\OpenXmlPowerTools\OpenXmlPowerTools.csproj", "{A2799473-5B6D-4A9A-A905-57267CAE9846}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F4AF56D-381C-42F9-B875-00B2546CBFE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F4AF56D-381C-42F9-B875-00B2546CBFE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F4AF56D-381C-42F9-B875-00B2546CBFE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F4AF56D-381C-42F9-B875-00B2546CBFE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61CB8D8C-DBF9-479B-AE22-93B0F21E0352}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CB8D8C-DBF9-479B-AE22-93B0F21E0352}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CB8D8C-DBF9-479B-AE22-93B0F21E0352}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61CB8D8C-DBF9-479B-AE22-93B0F21E0352}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EBC97D1-BF22-4EFF-B305-5CA76C030263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EBC97D1-BF22-4EFF-B305-5CA76C030263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EBC97D1-BF22-4EFF-B305-5CA76C030263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EBC97D1-BF22-4EFF-B305-5CA76C030263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55F505EA-1D4A-4F6E-8007-9D5AA47E64E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F505EA-1D4A-4F6E-8007-9D5AA47E64E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F505EA-1D4A-4F6E-8007-9D5AA47E64E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F505EA-1D4A-4F6E-8007-9D5AA47E64E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2799473-5B6D-4A9A-A905-57267CAE9846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2799473-5B6D-4A9A-A905-57267CAE9846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2799473-5B6D-4A9A-A905-57267CAE9846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2799473-5B6D-4A9A-A905-57267CAE9846}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0058762A-AA31-4FE5-BC6E-090B75060B3A}
+	EndGlobalSection
+EndGlobal

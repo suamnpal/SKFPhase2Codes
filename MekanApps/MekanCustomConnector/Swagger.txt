@@ -1,0 +1,252 @@
+﻿swagger: '2.0'
+info:
+  title: Dataverse Search and Web API
+  version: '1.0'
+  description: Dataverse Search API and Web API
+host: mekanappsdev.api.crm4.dynamics.com
+basePath: /api
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /search/v2.0/query:
+    post:
+      summary: Edb Dataverse Search
+      description: Execute Dataverse Search query.
+      operationId: EdbSearchQuery
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            type: object
+            required:
+              - search
+            properties:
+              search:
+                type: string
+                description: >
+                  Search text (supports simple search syntax; use quotes for
+                  exact phrases).
+              entities:
+                type: array
+                description: Array of entity logical names to search.
+                items:
+                  type: string
+              count:
+                type: boolean
+                description: Include total count.
+              top:
+                type: integer
+                format: int32
+                description: Number of results to return.
+              orderby:
+                type: array
+                description: Fields to sort by.
+                items:
+                  type: string
+              filter:
+                type: string
+                description: OData filter to apply.
+              facets:
+                type: array
+                description: Facet fields.
+                items:
+                  type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              '@odata.context':
+                type: string
+              value:
+                type: array
+                items:
+                  type: object
+                description: Search results.
+              count:
+                type: integer
+                format: int32
+                description: Total results (when requested).
+        default:
+          description: Error
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  code:
+                    type: string
+                  message:
+                    type: string
+  /data/v9.2/mekan_quotations:
+    get:
+      summary: Edb Get Distinct Values
+      description: Get unique column values from the quotation table via $apply groupby.
+      operationId: EdbGetDistinctValues
+      parameters:
+        - name: $apply
+          in: query
+          required: true
+          type: string
+          default: groupby((mekan_departmenttext))
+        - name: $skiptoken
+          in: query
+          required: false
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              Values:
+                type: array
+                items:
+                  type: string
+                description: Values
+              NextLink:
+                type: string
+                description: NextLink
+        default:
+          description: Error
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  code:
+                    type: string
+                  message:
+                    type: string
+  /data/v9.2/mekan_costestimates:
+    get:
+      summary: CC Get Distinct Values
+      description: Get any unique column values from the Cost Estimate table
+      operationId: CCGetDistinctValues
+      parameters:
+        - name: $apply
+          in: query
+          required: true
+          type: string
+          description: ''
+          default: groupby((mekan_type))
+        - name: $skiptoken
+          in: query
+          required: false
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              Values:
+                type: array
+                items:
+                  type: string
+                description: Values
+              NextLink:
+                type: string
+                description: NextLink
+        default:
+          description: Error
+          schema:
+            type: object
+  /data/v9.2/mekan_interngodsinkphuvuds:
+    get:
+      summary: IPD Get Distinct Values
+      description: Get unique column values from the IPD table via $apply groupby.
+      operationId: IpdGetDistinctValues
+      parameters:
+        - name: $apply
+          in: query
+          required: true
+          type: string
+          default: groupby((mekan_status))
+        - name: $skiptoken
+          in: query
+          required: false
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              Values:
+                type: array
+                items:
+                  type: string
+                description: Values
+              NextLink:
+                type: string
+                description: NextLink
+        default:
+          description: Error
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  code:
+                    type: string
+                  message:
+                    type: string
+  /data/v9.2/mekan_costcalcs:
+    get:
+      summary: PPC Get Distinct Values
+      description: Get any unique column values from the PPC table
+      operationId: PPCGetDistinctValues
+      parameters:
+        - name: $apply
+          in: query
+          required: true
+          type: string
+          description: ''
+          default: groupby((mekan_customer))
+        - name: $skiptoken
+          in: query
+          required: false
+          type: string
+          description: ''
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              Values:
+                type: array
+                items:
+                  type: string
+                description: Values
+              NextLink:
+                type: string
+                description: NextLink
+        default:
+          description: Error
+          schema:
+            type: object
+securityDefinitions:
+  oauth2-auth:
+    type: oauth2
+    flow: accessCode
+    tokenUrl: https://login.windows.net/common/oauth2/authorize
+    scopes:
+      https://mekanappsdev.api.crm4.dynamics.com/.default: https://mekanappsdev.api.crm4.dynamics.com/.default
+    authorizationUrl: https://login.microsoftonline.com/common/oauth2/authorize
+security:
+  - oauth2-auth:
+      - https://mekanappsdev.api.crm4.dynamics.com/.default
