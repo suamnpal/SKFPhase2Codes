@@ -1,0 +1,22 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.4",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "pa-integration-list-extension",
+    "libraryId": "5737d12d-d110-4593-9e30-f9048017bea4",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "PAIntegrationListExtension",
+    "solutionShortDescription": "PAIntegrationListExtension description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "FormCustomizer"
+  }
+}

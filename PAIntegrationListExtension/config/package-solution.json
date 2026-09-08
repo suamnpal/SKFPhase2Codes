@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pa-integration-list-extension-client-side-solution",
+    "id": "5737d12d-d110-4593-9e30-f9048017bea4",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "PAIntegrationListExtension description"
+      },
+      "longDescription": {
+        "default": "PAIntegrationListExtension description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pa-integration-list-extension Feature",
+        "description": "The feature that activates elements of the pa-integration-list-extension solution.",
+        "id": "670cf0c1-042f-4b11-9072-c68f69a0194e",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pa-integration-list-extension.sppkg"
+  }
+}
